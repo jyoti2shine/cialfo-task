@@ -1,2 +1,30 @@
-<h1>University#index</h1>
-<p>Find me in app/views/university/index.html.erb</p>
+<h1 class="data_display">List of University</h1>
+
+<table class="table table-striped table-bordered data_display">
+  <thead>
+  <tr>
+    <th>Rank</th>
+    <th>School Name</th>
+    <th>Tuition fees</th>
+    <th>Total enrollment</th>
+    <th>Acceptance rate</th>
+    <th>Retention rate</th>
+    <th>Graduation rate</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @records.each do |data_value| %>
+      <% data_value[1].each do |value| %>
+          <tr>
+            <td><%= value["rank"]  %></td>
+            <td><%= value["name"]  %></td>
+            <td><%= value["tuition_fees"]  %></td>
+            <td><%= value["total_enrollment"]  %></td>
+            <td><%= value["acceptance_rate"]  %></td>
+            <td><%= value["average_retention_rates"] %></td>
+            <td><%= value["graduation_rate"] %></td>
+          </tr>
+      <% end %>
+  <% end %>
+  </tbody>
+</table>
