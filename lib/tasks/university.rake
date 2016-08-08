@@ -28,7 +28,7 @@ def fetch_data(data,index)
     when 1
       data.css("a").text.strip
     when 2..6
-      data.text.strip
+      data.text.strip.split("\n").first
     else
       nil
   end
