@@ -13,7 +13,7 @@
   </tr>
   </thead>
   <tbody>
-  <% @records["data"].each do |value| %>
+  <% @records.each do |value| %>
       <tr>
         <td><%= value["rank"]  %></td>
         <td><%= value["name"]  %></td>
@@ -26,3 +26,4 @@
   <% end %>
   </tbody>
 </table>
+<%= paginate @records %>
