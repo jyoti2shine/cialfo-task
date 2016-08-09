@@ -6,4 +6,9 @@ class UniversityController < ApplicationController
       @records = Kaminari.paginate_array(JSON.parse(@data)["data"]).page(params[:page]).per(10)
     end
   end
+
+  def refresh_data
+    Cialfo::Application.load_tasks
+    Rake::Task["university:scrap_detail"].invoke
+  end
 end

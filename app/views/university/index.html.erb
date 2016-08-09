@@ -1,5 +1,6 @@
 <h1 class="data_display">List of University</h1>
 <%= page_entries_info @records, :entry_name => 'Universities' %>
+<%= link_to "Refresh", university_refresh_data_path , :class=>"btn btn-primary", :remote => true %>
 <table class="table table-striped table-bordered data_display">
   <thead>
   <tr>
