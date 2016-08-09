@@ -1,4 +1,10 @@
 <h1 class="data_display">List of University</h1>
+<div class="data_display page_entry_info">
+  <%= page_entries_info @records, :entry_name => 'Universities' %>
+</div>
+
+<%= link_to "Refresh", university_refresh_data_path , :class=>"btn btn-primary refresh_button pull-right", :remote => true,"data-disable-with"=>"Processing" %>
+
 <table class="table table-striped table-bordered data_display">
   <thead>
   <tr>
@@ -28,9 +34,3 @@
 <div class="data_display">
   <%= paginate @records %>
 </div>
-
-<div class="data_display page_entry_info">
-  <%= page_entries_info @records, :entry_name => 'Universities' %>
-</div>
-
-<%= link_to "Refresh", university_refresh_data_path , :class=>"btn btn-primary refresh_button", :remote => true,"data-disable-with"=>"Processing" %>
