@@ -31,3 +31,15 @@
 .pagination {
     border-left: 1px solid #ddd;
 }
+
+.page_entry_info{
+    color: gray;
+}
+
+.page_entry_info b{
+    color: #428bca;
+}
+
+.refresh_button{
+    margin-left:400px;margin-top:-45px;
+}
